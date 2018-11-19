@@ -1,0 +1,24 @@
+ville_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Ville:index" }
+    methods:  GET
+
+ville_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Ville:show" }
+    methods:  GET
+
+ville_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Ville:new" }
+    methods:  [GET, POST]
+
+ville_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Ville:edit" }
+    methods:  [GET, POST]
+
+ville_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Ville:delete" }
+    methods:  [GET, POST]

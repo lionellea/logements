@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{% block title -%}
+    
+{% endblock %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap 3.3.7 -->
+<link rel="stylesheet" href="{{asset('fronts/bower_components/bootstrap.min.css')}}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{{asset('fronts/bower_components/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{asset('fronts/bower_components/animate.css')}}">
+<link rel="stylesheet" href="{{asset('fronts/bower_components/font.css')}}">
+<link rel="stylesheet" href="{{asset('fronts/bower_components/li-scroller.css')}}">
+<link rel="stylesheet" href="{{asset('fronts/bower_components/slick.css')}}">
+<link rel="stylesheet" href="{{asset('fronts/bower_components/jquery.fancybox.css')}}">
+<link rel="stylesheet" href="{{asset('fronts/bower_components/theme.css')}}">
+<link rel="stylesheet" href="{{asset('fronts/bower_components/style.css')}}">
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+<a class="scrollToTop" href="#" style="display: block;"><i class="fa fa-angle-up"></i></a>
+<div class="container">
+  <header id="header">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_top">
+          <div class="header_top_right" style="width: 150px">
+          <div  style="width: 150px"class="logo_area"><a href="index.html" class="logo"><img  src="{{ asset('images/logo2.png') }}" alt=""></a></div>
+          </div>
+            <div class="header_top_left"style="margin-left: 380px">
+            <ul class="top_nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="">Inventaire</a></li>
+              <li><a href="pages/contact.html">Suivi</a></li>
+              <li><a href="index.html">Collecte</a></li>
+              <li><a href="#">Alerte</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_bottom">
+      </div>
+    </div>
+  </header>
+  <section id="navArea" style="text-align: center">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Données</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav main_nav">
+          <li class="active"><a href="index.html"><span class="fa fa-home desktop-home"></span>
+                  <span class="mobile-show">Home</span></a></li>
+          <li><a href="#">Données</a></li>
+          <li><a href="">Catastrophes</a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Carte</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">ADAMAOUA</a></li>
+              <li><a href="#">CENTRE</a></li>
+              <li><a href="#">EST</a></li>
+              <li><a href="#">EXTREME-NORD</a></li>
+              <li><a href="#">LITTORAL</a></li>
+              <li><a href="#">NORD</a></li>
+              <li><a href="#">NORD-OUEST</a></li>
+              <li><a href="#">OUEST</a></li>
+              <li><a href="#">SUD</a></li>
+              <li><a href="#">SUD-OUEST</a></li>
+
+            </ul>
+          </li>  
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Statistiques</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">DONNÉES</a></li>
+              <li><a href="#">DIAGRAMMES</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <section id="newsSection">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        
+      </div>
+    </div>
+  </section>
+  <section id="sliderSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+          {% block body %}
+          {% endblock %}
+      </div>
+    </div>
+  </section>
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="single_post_content">
+            <h2><span>Collecter les données</span></h2>
+            <div class="single_post_content_left">
+              <ul class="business_catgnav  wow fadeInDown">
+                <li>
+                  <figure class="bsbig_fig"> <a href="pages/single_page.html" class="featured_img"> <img alt="" src="{{ asset('images/featured_img1.jpg') }}"> <span class="overlay"></span> </a>
+                    <figcaption> <a href="pages/single_page.html">Proin rhoncus consequat nisl eu ornare mauris</a> </figcaption>
+                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="single_post_content_right">
+              <ul class="spost_nav">
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/post_img1.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/post_img2.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/post_img1.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/post_img2.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="single_post_content">
+            <h2><span>Subdivision</span></h2>
+            <ul class="photograph_nav  wow fadeInDown" >
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img2.jpg" title="Photography Ttile 1"> <img src="{{ asset('images/photograph_img2.jpg') }}" alt=""/></a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img3.jpg" title="Photography Ttile 2"> <img src="{{ asset('images/photograph_img3.jpg') }}" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img4.jpg" title="Photography Ttile 3"> <img src="{{ asset('images/photograph_img3.jpg') }}" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img4.jpg" title="Photography Ttile 4"> <img src="{{ asset('images/photograph_img4.jpg') }}" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img2.jpg" title="Photography Ttile 5"> <img src="{{ asset('images/photograph_img2.jpg') }}" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img3.jpg" title="Photography Ttile 6"> <img src="{{ asset('images/photograph_img3.jpg') }}" alt=""/> </a> </figure>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="single_post_content">
+            <h2><span>Comment se faire suivre</span></h2>
+            <div class="single_post_content_left">
+              <ul class="business_catgnav">
+                <li>
+                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="pages/single_page.html"> <img src="{{ asset('images/featured_img1.jpg') }}" alt=""> <span class="overlay"></span> </a>
+                    <figcaption> <a href="pages/single_page.html">Proin rhoncus consequat nisl eu ornare mauris</a> </figcaption>
+                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="single_post_content_right">
+              <ul class="spost_nav">
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img1.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img2.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img1.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img2.jpg') }}"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <aside class="right_content">
+          <div class="single_sidebar">
+            <h2><span>Zone à Haut risque</span></h2>
+            <ul class="spost_nav">
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img1.jpg') }}"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img2.jpg') }}"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img1.jpg') }}"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ asset('images/images/post_img2.jpg') }}"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="footer_top">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInLeftBig">
+            <h2>Flickr Images</h2>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInDown">
+            <h2>Tag</h2>
+            <ul class="tag_nav">
+              <li><a href="#">Games</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Life &amp; Style</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Photo</a></li>
+              <li><a href="#">Slider</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInRightBig">
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <address>
+            Perfect News,1238 S . 123 St.Suite 25 Town City 3333,USA Phone: 123-326-789 Fax: 123-546-567
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <p class="copyright">Copyright &copy; 2045 <a href="index.html">NewsFeed</a></p>
+      <p class="developer">Developed By Wpfreeware</p>
+    </div>
+  </footer>
+</div>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<!-- Morris.js charts -->
+<script src="{{asset('js/wow.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<!-- Sparkline -->
+<script src="{{asset('js/slick.min.js')}}"></script>
+<!-- jvectormap -->
+<script src="{{asset('js/jquery.li-scroller.1.0.js')}}"></script>
+<script src="{{asset('js/jquery.newsTicker.min.js')}}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{asset('js/jquery.fancybox.pack.js')}}"></script>
+<!-- daterangepicker -->
+
+<script src="{{asset('js/custom.js')}}"></script>
+
+</body>
+</html>

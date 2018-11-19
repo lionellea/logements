@@ -1,0 +1,3 @@
+statUser_homepage:
+    path: stat/
+    defaults: { _controller: StatBundle:StatUser:stat}

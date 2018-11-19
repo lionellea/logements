@@ -1,0 +1,179 @@
+{% extends '::template.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title -%}
+        <title>1000F Invest - Connexion/Inscription{{""|trans}}</title>
+    
+{% endblock %}
+{% block body -%}
+    <a href="register_content.html.twig"></a>
+  
+    
+    <!-- Breadcromb Area Start -->
+    <section class="finance-breadcromb-area section_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="breadcromb-left">
+                        <h3>S'incrire{{""|trans}}</h3>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="breadcromb-right">
+                        <ul>
+                            <li><a href="{{ path('homepage')}}"><i class="fa fa-home"></i>Accueil{{""|trans}}</a></li>
+                            <li>/</li>
+                            <li><a href="{{ path('fos_user_security_login')}}">Connexion{{""|trans}}</a></li>
+                            <li>/</li>
+                            <li>Inscription{{""|trans}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcromb Area End -->
+    
+    
+    
+    <!-- Myaccount Area Start -->
+    <section class="finance-myaccount-area section_15">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="finance-register calculate-shipping-left" style="margin-top: 0;">
+                        <h3 class="col-md-7 col-md-offset-2">{{"Inscrivez-vous pour commencer à investir!"|trans}}</h3>
+                        {% trans_default_domain 'FOSUserBundle' %}
+
+                    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                        {{ form_errors(form) }}    
+                        <div class="row register-form">
+                                <div class="col-md-6 col-sm-6">
+                                    {{ form_label(form.username, "Nom d'utilisateur"|trans, {'label_attr': {'for': 'nom'}}) }}
+                                    <div class="account-form-group">
+                                        {{ form_widget(form.username, {'attr': {'class': 'form-control', 'type': 'text', 'id': 'nom', 'name': 'register2-username', 'placeholder': 'Entrez votre nom...'|trans }}) }}
+                   
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    {{ form_errors(form.username) }}
+                    
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    {{ form_label(form.prenom, "Prénom"|trans, {'label_attr': {'for': 'prenom'}}) }}
+                                    <div class="account-form-group">
+                                        {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'type': 'text', 'id': 'prenom', 'name': 'register2-username', 'placeholder': 'Entrez votre prénom...'|trans}}) }}
+                   
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    {{ form_errors(form.prenom) }}
+                                </div>
+                               
+                            </div>
+                            <div class="row register-form">
+                                 <div class="col-md-6 col-sm-6">
+                                    {{ form_label(form.email, "Email"|trans, {'label_attr': {'for': 'register2-email'}}) }}
+                         <div class="account-form-group">
+                                        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'type': 'email', 'id': 'register2-email', 'name': 'register2-email', 'placeholder': 'Entrez votre email...'|trans}}) }}
+                   <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                    {{ form_errors(form.email) }}
+                    
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <label for="email" >{{"Confirmation Email"|trans}}</label>
+                                    <div class="account-form-group">
+                                        <input type="email" name="email" id="email" >
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="row register-form">
+                                <div class="col-md-6 col-sm-6">
+                                    {{ form_label(form.plainPassword.first, "Mot de passe"|trans, {'label_attr': {'for': 'register2-password'}}) }}
+                        <div class="account-form-group">
+                                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'type': 'password', 'id': 'register2-password', 'name': 'register2-password', 'placeholder': 'Entrez le mot de passe...'|trans}}) }}
+                    <i class="fa fa-phone"></i>
+                                    </div>
+                                    {{ form_errors(form.plainPassword.first) }}
+                    
+                                </div>
+                                 <div class="col-md-6 col-sm-6">
+                                    {{ form_label(form.plainPassword.second, "Confirmation de mot de passe"|trans, {'label_attr': {'for': 'register2-password'}}) }}
+                        <div class="account-form-group">
+                                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'type': 'password', 'id': 'register2-password', 'name': 'register2-password', 'placeholder': 'Entrez de nouveau votre mot de passe...'|trans}}) }}
+                    <i class="fa fa-phone"></i>
+                                    </div>
+                                    {{ form_errors(form.plainPassword.second) }}
+                    
+                                </div>
+                                
+                            </div>
+                                    <div class="row register-form">
+                                <div class="col-md-6 col-sm-6">
+                                    {{ form_label(form.telephone, "Numero de téléphone"|trans, {'label_attr': {'for': 'register2-username'}}) }}
+                        <div class="account-form-group">
+                                        {{ form_widget(form.telephone, {'attr': {'class': 'form-control', 'type': 'text', 'id': 'register2-username', 'name': 'register2-username', 'placeholder': 'Entrez votre numero de téléphone ...'|trans}}) }}
+                    <i class="fa fa-phone"></i>
+                                    </div>
+                                    {{ form_errors(form.telephone) }}
+                    
+                                </div>
+                                 <div class="col-md-6 col-sm-6">
+                                    {{ form_label(form.telephoneWhatsapp, "Numero de téléphone whatsapp"|trans, {'label_attr': {'for': 'register2-username'}}) }}
+                        <div class="account-form-group">
+                                        {{ form_widget(form.telephoneWhatsapp, {'attr': {'class': 'form-control', 'type': 'text', 'id': 'register2-username', 'name': 'register2-username', 'placeholder': 'Entrez votre numero de téléphone ...'|trans}}) }}
+                    <i class="fa fa-phone"></i>
+                                    </div>
+                                    {{ form_errors(form.telephoneWhatsapp) }}
+                    
+                                </div>
+                                
+                            </div>
+                                
+                            <div class="row register-form ">
+                                <div class="col-md-6 col-sm-6 ">
+                                    {{ form_label(form.pays, "Pays"|trans, {'label_attr': {'for': 'example2-select2'}}) }}
+                        <div class="account-form-group">
+                                        {{ form_widget(form.pays, {'attr': {'class': 'js-select2 form-control pays', 'data-placeholder': 'Choisisez un pays...'}}) }}
+                    
+                                        <i class="fa fa-map " style="margin-right: 10px;"></i>
+                                    </div>
+                                    {{ form_errors(form.pays) }}
+                    
+                                </div>
+                                <div class="col-md-6 col-sm-6 ">
+                                    {{ form_label(form.ville, "Ville"|trans, {'label_attr': {'for': 'register2-username'}}) }}
+                        <div class="account-form-group">
+                                        {{ form_widget(form.ville, {'attr': {'class': 'form-control', 'type': 'text', 'id': 'register2-username', 'name': 'register2-username', 'placeholder': 'Entrez la ville...'|trans}}) }}
+                    <i class="fa fa-map-marker" ></i>
+                                    </div>
+                                    {{ form_errors(form.ville) }}
+                    
+                                </div>
+                            </div>
+                            
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <input id="terms" type="checkbox" required>
+                                    <label for="terms" >{{"J'accepte les termes et conditions"|trans}}</label>
+                                </div>
+                            </div>
+                            <div class="row register-form-btn">
+                                <div class="col-md-12">
+                                    <button type="submit" >{{"Créer le compte"|trans}}</button>
+                                </div>
+                            </div>
+                        {{ form_rest(form) }}
+{{ form_end(form) }}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+                    </div>
+    </section>
+    <!-- Myaccount Area End -->
+    
+   
+    
+     {% endblock %}

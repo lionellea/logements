@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <!-- Page Content -->
+                    <div class="container-fluid p-y-md">
+
+                        <!-- Login Forms -->
+                        
+                        <div class="row">
+                            
+                            <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 ">
+                                <!-- Material Login -->
+                                <h2 class="section-title">{%trans %}Modifier un utilisateur{% endtrans%}</h2>
+                                <div class="card">
+                                    <div class="card-header bg-teal bg-inverse">
+                                        <ul class="list">
+                                            <li>
+                                            {{ form_start(delete_form) }}
+                                                <input class="btn btn-danger" type="submit" value="Supprimer">
+                                            {{ form_end(delete_form) }}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-block bg-gray-lighter">
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Modifier" />
+    {{ form_end(edit_form) }}
+<br/>
+    <a  class="btn btn-app-teal "  href="{{ path('utilisateurs_index') }}">{% trans%}Revenir à la liste{% endtrans%}</a>
+    
+
+  
+   </div>
+                                    <!-- .card-block -->
+                                </div>
+                                <!-- .card -->
+                                <!-- End Material Login -->
+                            </div>
+                            <!-- .col-lg-4 -->
+
+							
+
+                        </div>
+                        <!-- .row -->
+                        <!-- End Login Forms -->
+
+                        
+						
+						
+                    </div>
+                    <!-- .container-fluid -->
+                    <!-- End Page Content -->
+{% endblock %}

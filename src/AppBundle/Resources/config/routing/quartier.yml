@@ -1,0 +1,24 @@
+quartier_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Quartier:index" }
+    methods:  GET
+
+quartier_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Quartier:show" }
+    methods:  GET
+
+quartier_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Quartier:new" }
+    methods:  [GET, POST]
+
+quartier_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Quartier:edit" }
+    methods:  [GET, POST]
+
+quartier_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Quartier:delete" }
+    methods:  [GET, POST]

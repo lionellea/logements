@@ -1,0 +1,39 @@
+{% extends 'template.html.twig' %}
+{% block title %}
+<title> Terrain | Ajout</title>   
+{% endblock %}
+{% block body %}
+   
+    <section class="content">
+     <section class="content">
+      <div class="row">
+            <div class="col-md-6" style="margin-left: 20%;margin-top: 5%">
+                <div class="box box-primary "style="padding: 50px;" >
+                         <a class="btn btn-primary" hreflogement="{{ path('terrain_index') }}"><i class="fa fa-arrow-left"></i>  Retour à la liste</a>
+                   
+                    <div class="box-header with-border">
+                    <br/>
+                       <h2 class="box-title" style="margin-left: 20%;">Enregistrement d'un terrain</h2>
+                    </div>
+                   
+                    <div class="row">
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+       <div class="row">
+            <div class="col-md-4" style="margin-left: 30%;">
+                <input type="submit" value="Enregistrer" class="btn btn-block btn-primary"/>
+           </div>
+        </div>
+    {{ form_end(form) }}
+
+    <br><br>
+    
+        </div>
+       </div>
+       </div>
+
+      </div>
+   
+    </section>
+{% endblock %}

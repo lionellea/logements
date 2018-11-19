@@ -1,0 +1,112 @@
+
+
+{% block title -%}
+        <title>Logement - {{"Connexion/Inscription"|trans}}</title>
+    
+{% endblock %}
+
+{% block body -%}
+  
+    
+    <!-- Breadcromb Area Start -->
+    <section class="finance-breadcromb-area section_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="breadcromb-left">
+                        <h3>{{"Connectez-vous pour commencer à investir ou soumettre des projets"|trans}}</h3>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="breadcromb-right">
+                        <ul>
+                            <li><a href="{{ path('homepage')}}"><i class="fa fa-home"></i>{{"Accueil"|trans}}</a></li>
+                            <li>/</li>
+                            <li><a href="{{ path('fos_user_security_login')}}"Inscription>{{"Connexion"|trans}}</a></li>
+                            <li>/</li>
+                            <li>{{"Inscription"|trans}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcromb Area End -->
+    
+    
+    
+    <!-- Myaccount Area Start -->
+    <section class="finance-myaccount-area section_15">
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-4 ">
+                    <br/> 
+                </div>    
+                <div class="col-md-5 ">
+                    <div class="finance-login">
+                        <form action="{{ path("fos_user_security_check") }}" method="post">
+                            {% if error %}
+                                <div class="text-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+                            {% if csrf_token %}
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                            {% endif %} 
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <label for="username" >{{"Login ou email"|trans}}</label>
+                                    <div class="account-form-group">
+                                        <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="{{"Entez le nom d'utilisateur ou l'email"|trans}}..." />
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <label for="password" >{{"Mot de passe"|trans}}</label>
+                                    <div class="account-form-group">
+                                        <input  class="form-control" type="password" id="password" name="_password" required="required" placeholder="{{"Entez votre mot de passe"|trans}}..."/>
+                                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row register-form">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="remember">
+                                        <input type="checkbox" id="remember_me" name="_remember_me" value="on" style="float: left !important;" />
+                                        <label class="css-input switch switch-sm switch-default" for="remember_me"  style="float: left !important;"> {{"Session active"|trans}}</label>
+                                                    
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="forgot">
+                                        <label for="remember_me">
+                                            <a class="mdl-label" href="{{ path("fos_user_resetting_request") }}">{{ 'Mot de passe perdu'|trans}} ?</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row checkout-form" style="text-align: center;">
+                                <div class="col-md-12">
+                                    <label >{{"ou"|trans}}</label>
+                                </div>
+                            </div>
+                             <div class="row checkout-form" style="text-align: center;">
+                                <div class="col-md-12">
+                                    <a href="{{ path('fos_user_registration_register')}}" class="text-olive">{{""|trans}}</a>
+                                </div>
+                            </div>
+                            <div class="row register-form-btn">
+                                <div class="col-md-12">
+                                    <button class="btn btn-app-teal" type="submit" id="_submit" name="_submit" >{{"Se connecter"|trans}}</button>
+                                                
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Myaccount Area End -->
+    
+     {% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'template.html.twig' %}
+{% block title %}
+     <title> Ville | Liste</title>
+{% endblock %}
+
+{% block body %}
+                  
+     <section class="content-header">
+   
+      <ol class="breadcrumb" style="margin-right: 50%">
+        <li><a href="#"><i class="fa fa-home"></i> Accueil</a></li>
+        <li><a href="#">Ville</a></li>
+        <li class="active">Liste</li>
+      </ol>
+        
+    </section>
+      <br><br>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+               <span>
+                   <a class="btn btn-primary" href="{{ path('ville_new') }}"><i class="fa fa-user"></i>  Ajout d'une ville</a>
+               </span>
+        <br><br>
+
+          <div class="box">
+              <br>
+            <div class="box-header">
+              <h3 class="box-title" style="margin-left: 30%;">Liste des villes</h3>
+            </div>
+              
+            <!-- /.box-header -->
+            <div class="box-body">
+           <table id="example1" class="table table-bordered table-striped">
+           
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ville in villes %}
+            <tr>
+                <td>{{ ville.nom }}</td>
+               <td>
+                   <a class="btn btn-success" title="éditer" href="{{ path('ville_edit', { 'id': ville.id }) }}"><i class="fa fa-edit"></i></a>
+                   <a class="btn btn-danger" data-toggle="modal" data-target="#modal-default" title="Supprimer" ><i class="glyphicon glyphicon-trash" ></i></a>
+                   <a class="btn btn-info " title="Détails"  href="{{ path('ville_show', { 'id': ville.id }) }}"><i class="fa fa-info-circle" ></i></a>
+                 
+                </td>
+            </tr>
+        <div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Suppression des villes</h4>
+              </div>
+              <div class="modal-body">
+                 <h4>Voulez-vous vraiment supprimer cette ville ?</h4>
+              </div>
+              <div class="modal-footer">
+                   <div class="">
+                 </div>
+                <a class="btn btn-default pull-left" aria-hidden="true" data-dismiss="modal">Annuler</a>
+                <a class="btn btn-danger " title="Supprimer"  href="{{ path('ville_delete', { 'id': ville.id }) }}">Supprimer</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        {% endfor %}
+        </tbody>
+        </table>
+   
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+{% endblock %}

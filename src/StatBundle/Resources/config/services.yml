@@ -1,0 +1,5 @@
+services: 
+    Stat.select:
+        class: StatBundle\Service\StatSelect
+    StatUser.select:
+        class: StatBundle\Service\StatSelectUser

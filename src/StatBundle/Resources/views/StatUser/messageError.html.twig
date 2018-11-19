@@ -1,0 +1,48 @@
+ {% block stylepage %}
+        <link rel="apple-touch-icon" href="{{ asset('assets/img/favicons/apple-touch-icon.png') }}" />
+        <link rel="icon" href="{{ asset('assets/img/favicons/favicon.ico') }}" />
+
+        <!-- Google fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,900%7CRoboto+Slab:300,400%7CRoboto+Mono:400" />
+
+        <!-- AppUI CSS stylesheets -->
+        <link rel="stylesheet" id="css-font-awesome" href="{{ asset('assets/css/font-awesome.css') }}" />
+        <link rel="stylesheet" id="css-ionicons" href="{{ asset('assets/css/ionicons.css') }}" />
+        <link rel="stylesheet" id="css-bootstrap" href="{{ asset('assets/css/bootstrap.css') }}" />
+        <link rel="stylesheet" id="css-app" href="{{ asset('assets/css/app.css') }}" />
+        <link rel="stylesheet" id="css-app-custom" href="{{ asset('assets/css/app-custom.css') }}" />       
+
+{% endblock %}
+
+{% block stat %}
+        
+    <div class="card-block">        
+        <div class="alert alert-danger" >
+            <p>Aucune donnée n'a été trouvée</p>
+        </div>
+    </div>         
+{% endblock %}
+{% block javascripts %}
+            <!-- AppUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock and App.js -->
+        <script src="{{ asset('assets/js/core/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/core/jquery.slimscroll.min.js') }}"></script>
+        <script src="{{ asset('assets/js/core/jquery.scrollLock.min.js') }}"></script>
+        <script src="{{ asset('assets/js/core/jquery.placeholder.min.js') }}"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <script src="{{ asset('assets/js/app-custom.js') }}"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="{{ asset('assets/js/plugins/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+
+        <!-- Page JS Code -->
+        <script>
+            $(function()
+            {
+                // Init page helpers (BS Notify Plugin)
+                App.initHelpers('notify');
+            });
+        </script>
+              
+{% endblock %}
+

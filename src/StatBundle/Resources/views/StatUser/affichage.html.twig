@@ -1,0 +1,132 @@
+
+{% block stylepage %}
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- Document title -->
+    <title>Components &ndash; Chart.js | AppUI</title>
+
+    <meta name="description" content="AppUI - Admin Dashboard Template & UI Framework" />
+    <meta name="author" content="rustheme" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="{{ asset('assets/img/favicons/apple-touch-icon.png') }}" />
+    <link rel="icon" href="{{ asset('assets/img/favicons/favicon.ico') }}" />
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,900%7CRoboto+Slab:300,400%7CRoboto+Mono:400" />
+
+    <!-- AppUI CSS stylesheets -->
+    <link rel="stylesheet" id="css-font-awesome" href="{{ asset('assets/css/font-awesome.css') }}" />
+    <link rel="stylesheet" id="css-ionicons" href="{{ asset('assets/css/ionicons.css') }}" />
+    <link rel="stylesheet" id="css-bootstrap" href="{{ asset('assets/css/bootstrap.css') }}" />
+    <link rel="stylesheet" id="css-app" href="{{ asset('assets/css/app.css') }}" />
+    <link rel="stylesheet" id="css-app-custom" href="{{ asset('assets/css/app-custom.css') }}" />       
+           
+{% endblock %}
+
+{% block stat %}
+        
+<div class="row">
+    <!-- Bars Chart -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>Toutes les observations</h4>
+                <ul class="card-actions ">
+                    <li>
+                        <button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-block text-center">
+                <!-- Bars Chart Container -->
+                <div style="height:430px; width:700px"><canvas class="js-chartjs-bars"></canvas></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bars Chart // .col-md-6 -->
+</div>
+             
+{% endblock %}
+{% block javascripts %}
+                
+    <script src="{{ asset('assets/js/core/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/jquery.scrollLock.min.js') }}"></script>
+    <script src="{{ asset('assets/js/core/jquery.placeholder.min.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/app-custom.js') }}"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="{{ asset('assets/js/plugins/chartjs/Chart.min.js') }}"></script>
+
+    <script>
+                    /*
+        Document: base_js_charts_chartjs.js
+        Author: Rustheme
+        Description: Custom JS code used in Charts Chart.js Page
+        */
+
+        var BaseJsCharts = function() {
+            // Chart.js Charts: http://www.chartjs.org/docs
+            var initChartsChartJS = function() {
+
+                // Get Chart Containers
+                var $chartBarsCnt = jQuery( '.js-chartjs-bars' )[0].getContext( '2d' );
+
+                // Set global chart options
+                var $globalOptions = {
+                    scaleFontFamily: 'Roboto, Arial, sans-serif',
+                    scaleFontColor: App.colors.text_muted,
+                    scaleFontStyle: '500',
+                    tooltipTitleFontFamily: 'Roboto, Arial, sans-serif',
+                    tooltipCornerRadius: 2,
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    animation: false,
+                };
+
+                // Lines/Bar/Radar Chart Data
+                var $chartLinesBarsRadarData = {
+                    labels: [{% for key, resultat in resultats %}
+                              '{{resultat.attribut}}',
+                      {% endfor %}],
+                    datasets: [{
+                        label: 'Last Week',
+                        fillColor: App.hexToRgba( App.colors.blue, 40 ),
+                        strokeColor: App.hexToRgba( App.colors.blue, 40 ),
+                        pointColor: App.hexToRgba( App.colors.blue, 40 ),
+                        pointStrokeColor: '#fff',
+                        data: [{% for key, resultat in resultats %}
+                              {{resultat.nombre}},
+                      {% endfor %} ]
+                    }]
+                };
+
+
+                // Init Charts
+
+                $chartBars = new Chart( $chartBarsCnt ).Bar( $chartLinesBarsRadarData, $globalOptions );
+            };
+
+            return {
+                init: function() {
+                    // Init charts
+                    initChartsChartJS();
+                }
+            };
+        }();
+
+        // Initialize when page loads
+        jQuery( function() {
+            BaseJsCharts.init();
+        });
+
+    </script>
+                
+{% endblock %}

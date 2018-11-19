@@ -1,0 +1,21 @@
+app_logement:
+        resource: "@AppBundle/Resources/config/routing/logement.yml"
+        prefix:   /logement
+        
+
+app_ville:
+        resource: "@AppBundle/Resources/config/routing/ville.yml"
+        prefix:   /ville  
+        
+
+app_quartier:
+        resource: "@AppBundle/Resources/config/routing/quartier.yml"
+        prefix:   /quartier
+        
+app_image:
+        resource: "@AppBundle/Resources/config/routing/image.yml"
+        prefix:   /image
+    
+app_terrain:
+        resource: "@AppBundle/Resources/config/routing/terrain.yml"
+        prefix:   /terrain        

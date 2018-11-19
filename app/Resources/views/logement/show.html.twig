@@ -1,0 +1,38 @@
+{% extends 'template.html.twig' %}
+{% block title %}
+     <title> Logement | Détails</title>
+{% endblock %}
+{% block body %}
+     <div class="row">
+        <div class="col-md-8" style="margin-left: 20%;margin-top: 5%">
+            <div class="box box-primary " >
+                <a style="margin-top: 2%;margin-left: 2%" class="btn btn-primary" href="{{ path('logement_index') }}"><i class="fa fa-arrow-left"></i>  Retour à la liste</a>
+                
+    
+              <h1 style="margin-left: 30%">Détails Logement</h1>
+            <table id="example1" class="table table-bordered table-striped" >
+        
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ logement.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ logement.type }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ logement.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Dateenreg</th>
+                <td>{% if logement.dateEnreg %}{{ logement.dateEnreg|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+    </div>
+    </div>
+{% endblock %}

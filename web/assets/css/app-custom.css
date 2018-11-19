@@ -1,0 +1,191 @@
+/*
+App-custom.css
+Template name: AppUI
+Author: rustheme
+*/
+
+/*# sourceMappingURL=maps/app-custom.css.map */
+
+.hov1:hover
+{
+	background-color: #f9f9f9;
+}
+/*Nirou ---------------------------------------------*/
+
+.fs12
+{
+	font-size:12px ;
+}
+
+.fs14
+{
+	font-size:14px ;
+}
+
+.fs16
+{
+	font-size:16px ;
+}
+
+.fs18
+{
+	font-size:18px  ;
+}
+
+.fs20
+{
+	font-size:20px ;
+}
+
+.fs22
+{
+	font-size:22px ;
+}
+.fs24
+{
+	font-size:24px ;
+}
+
+/*Nirou ---------------------------------------------*/
+
+.noPadding
+{
+	padding:0px !important;
+}
+.noPaddingH
+{
+	padding-top:0px !important;
+}
+.noPaddingB
+{
+	padding-bottom:0px !important;
+}
+.noPaddingG
+{
+	padding-left:0px !important;
+}
+.noPaddingD
+{
+	padding-right:0px !important;
+}
+.noMargin
+{
+	margin:0px !important;
+}
+.noRaduis
+{
+	border-radius:0px !important;
+}
+
+/*Nirou ---------------------------------------------*/
+
+.pda5
+{
+	padding:5px !important;
+}
+.pda10
+{
+	padding:10px !important;
+}
+.pda15
+{
+	padding:15px !important;
+}
+.pda20
+{
+	padding:20px !important;
+}
+.pda25
+{
+	padding:25px ;
+}
+/*Nirou ---------------------------------------------*/
+
+.pdt5
+{
+	padding-top:5px ;
+}
+.pdt10
+{
+	padding-top:10px ;
+}
+.pdt15
+{
+	padding-top:15px ;
+}
+.pdt20
+{
+	padding-top:20px ;
+}
+.pdt25
+{
+	padding-top:25px ;
+}
+
+/*Nirou ---------------------------------------------*/
+
+.pdb5
+{
+	padding-bottom:5px ;
+}
+.pdb10
+{
+	padding-bottom:10px ;
+}
+.pdb15
+{
+	padding-bottom:15px ;
+}
+.pdb20
+{
+	padding-bottom:20px ;
+}
+.pdb25
+{
+	padding-bottom:25px ;
+}
+
+/*Nirou ---------------------------------------------*/
+
+.pdg5
+{
+	padding-left:5px !important;
+}
+.pdg10
+{
+	padding-left:10px ;
+}
+.pdg15
+{
+	padding-left:15px ;
+}
+.pdg20
+{
+	padding-left:20px ;
+}
+.pdg25
+{
+	padding-right:25px ;
+}
+/*Nirou ---------------------------------------------*/
+
+.pdd5
+{
+	padding-right:5px !important;
+}
+.pdd10
+{
+	padding-right:10px ;
+}
+.pdd15
+{
+	padding-right:15px ;
+}
+.pdd20
+{
+	padding-right:20px ;
+}
+.pdd25
+{
+	padding-right:25px ;
+}

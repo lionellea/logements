@@ -1,0 +1,23 @@
+stat:
+    resource: "@StatBundle/Resources/config/routing.yml"
+    prefix:   /
+
+begin:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    prefix:   /
+
+api:
+    resource: "@AppBundle/Controller/Api/"
+    prefix:   /api
+    type: rest
+    
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix:   /
+
